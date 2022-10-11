@@ -1,6 +1,5 @@
 package com.example.notificationmanager
 
-import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -8,12 +7,7 @@ import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Color.GREEN
-import android.media.RingtoneManager
-import android.net.Uri
 import android.os.Build
-import android.provider.Settings.*
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
@@ -44,7 +38,6 @@ class AlarmReceiver :BroadcastReceiver() {
         }
     }
 
-    @SuppressLint("WrongConstant")
     @RequiresApi(Build.VERSION_CODES.O)
     private fun notificationBuilder(ctx: Context, pendingIntent: PendingIntent): Notification {
         return NotificationCompat.Builder(ctx, CHANNEL_ID)
